@@ -1,3 +1,36 @@
+/*Question 1. Given array indicates height of the building. The problem is to identify which are all the buildings can see the sunrise based on the location of the sun. 
+
+If sun is in right side of the sky, building will be in the left side and vice versa. If the next building is of the same height, then we can ignore that building.
+
+Input 1:
+7 4 8 2 9
+Position of sun : Left
+Output: 3
+
+Explanation : 
+Sun is in the left, and the first building of height 7, so sun is visible.
+Next building is of height 4 which is lower than first building, so sun is not visible
+Next building is of height 8 which is higher than first building, so sun is visible.
+Next building is of height 2 which is lower than other building, so sun is not visible
+Next building is of height 9 which is higher than third building, so sun is visible.
+Totally 3.
+
+Input 2 : 
+2 3 4 5 5
+Position of sun : Left
+Output: 4
+
+Input 3 : 
+2 3 4 5
+Position of sun : Right
+Output: 1
+
+5 6 3 2 8 1 9
+output : 4
+*/
+
+
+
 #include<stdio.h>
 
 int main()

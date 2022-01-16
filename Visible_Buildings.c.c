@@ -52,14 +52,14 @@ int main()
 		
 	int position;
 	int visible=1;  //First building is always visible;
-	printf("Enter the position(2=left and 4= right) : ");
+	printf("Enter the position(1=left and 2= right) : ");
 	scanf("%d",&position);
 	
 		
 	//If Position of sun is left	
 	switch(position)  
 	{
-	case(2):
+	case(1):
 	{
 		max=arr[0];
 		for(i=1;i<size;i++)
@@ -67,7 +67,10 @@ int main()
 			if(arr[i]!=arr[i+1]) // If consecutive buildings have same height, sun is not visible to 2nd building;
 			{
 				if(arr[i]>max)
+				{
+					max=arr[i];
 					visible++;
+				}
 			}
 		}
 		break;
@@ -75,7 +78,7 @@ int main()
 	 
 	 
 	//If Position of sun is right    
-	case(4):
+	case(2):
 	{
 		max=arr[size-1];
 		for(i=size-1;i>0;i--)
@@ -84,6 +87,7 @@ int main()
 			{
 				if(arr[i]>max)
 				{
+					max=arr[i];
 					visible++;
 				}
 			}

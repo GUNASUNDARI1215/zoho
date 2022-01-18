@@ -64,13 +64,10 @@ int main()
 		max=arr[0];
 		for(i=1;i<size;i++)
 		{
-			if(arr[i]!=arr[i+1]) // If consecutive buildings have same height, sun is not visible to 2nd building;
+			if( (arr[i]!=arr[i+1]) && (arr[i]>max) ) // If consecutive buildings have same height, sun is not visible to 2nd building;
 			{
-				if(arr[i]>max)
-				{
-					max=arr[i];
-					visible++;
-				}
+				max=arr[i];
+				visible++;
 			}
 		}
 		break;
@@ -81,15 +78,12 @@ int main()
 	case(2):
 	{
 		max=arr[size-1];
-		for(i=size-1;i>0;i--)
+		for(i=size-1;i>=0;i--)
 		{
-			if(arr[i]!=arr[i-1])
-			{
-				if(arr[i]>max)
-				{
-					max=arr[i];
-					visible++;
-				}
+			if( (arr[i]!=arr[i-1]) && (arr[i]>max) )
+			{	
+				max=arr[i];
+				visible++;
 			}
 		}
 		break;
